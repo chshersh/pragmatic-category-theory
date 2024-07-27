@@ -9,5 +9,16 @@
 
 (license MIT)
 
+(generate_opam_files true)
+
 (package
- (name semigroup))
+ (name semigroup)
+  (depends
+    (ocaml
+     (>= 4.08))
+  (alcotest
+   (and
+    :with-test
+    (>= 1.3.0)))
+ )
+)
