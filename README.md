@@ -1,6 +1,15 @@
 # Pragmatic Category Theory
 
-Pragmatic Category Theory for Beginners in OCaml with lots of real-world examples
+Pragmatic Category Theory for Beginners in OCaml with lots of real-world examples. It's a series of text articles and videos. This repository contains code that powers the content.
+
+> [!IMPORTANT]
+> The series is currently in progress.
+
+| Part | Article | Video |
+| ---- | ------- | ----- |
+| Part 1: Semigroup Intro | [Article][article-1] | - |
+
+[article-1]: https://dev.to/chshersh/pragmatic-category-theory-part-1-semigroup-intro-1ign
 
 ## Development
 
