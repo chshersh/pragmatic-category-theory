@@ -14,8 +14,12 @@ module String  : S with type t = string
 
 (* Basic polymorphic instances *)
 
-module Min   : functor (C : Map.OrderedType) -> S with type t = C.t
-module Max   : functor (C : Map.OrderedType) -> S with type t = C.t
+module Min   : functor (C: Map.OrderedType) -> S with type t = C.t
+module Max   : functor (C: Map.OrderedType) -> S with type t = C.t
 module First : functor (T: sig type t end)   -> S with type t = T.t
 module Last  : functor (T: sig type t end)   -> S with type t = T.t
 module List  : functor (T: sig type t end)   -> S with type t = T.t list
+
+(* Composing Semigroup instances *)
+
+module Pair : functor (S1: S) -> functor (S2: S) -> S with type t = S1.t * S2.t

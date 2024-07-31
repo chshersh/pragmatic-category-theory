@@ -63,3 +63,9 @@ module List(T : sig type t end) = struct
 
   let append = ( @ )
 end
+
+module Pair(S1: S) (S2: S) = struct
+  type t = S1.t * S2.t
+
+  let append (a1, b1) (a2, b2) = (S1.append a1 a2, S2.append b1 b2)
+end

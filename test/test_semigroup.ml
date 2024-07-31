@@ -36,6 +36,13 @@ let test_list () =
     "List::Int" [ 0; 1; 2; 4; 5; 6 ]
     (ListInt.append [ 0; 1; 2 ] [ 4; 5; 6 ])
 
+let test_pair () =
+  let module MaxInt = Max (Int) in
+  let module PairInt = Pair (MaxInt) (String) in
+  Alcotest.(check (pair int string))
+    "Pair::Int * String" (5, "foobar")
+    (PairInt.append (5, "foo") (1, "bar"))
+
 let tests =
   [
     ("test_int_add", `Quick, test_int_add);
@@ -47,5 +54,6 @@ let tests =
     ("test_max", `Quick, test_max);
     ("test_first", `Quick, test_first);
     ("test_last", `Quick, test_last);
-    ("test_list", `Quick, test_last);
+    ("test_list", `Quick, test_list);
+    ("test_pair", `Quick, test_pair);
   ]
