@@ -33,3 +33,33 @@ module String = struct
 
   let append = ( ^ )
 end
+
+module Min(C : Map.OrderedType) = struct
+  type t = C.t
+
+  let append x y = if C.compare x y <= 0 then x else y
+end
+
+module Max(C : Map.OrderedType) = struct
+  type t = C.t
+
+  let append x y = if C.compare x y >= 0 then x else y
+end
+
+module First(T : sig type t end) = struct
+  type t = T.t
+
+  let append x _ = x
+end
+
+module Last(T : sig type t end) = struct
+  type t = T.t
+
+  let append _ y = y
+end
+
+module List(T : sig type t end) = struct
+  type t = T.t list
+
+  let append = ( @ )
+end
