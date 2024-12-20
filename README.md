@@ -9,9 +9,11 @@ Pragmatic Category Theory for Beginners in OCaml with lots of real-world example
 | ---- | ------- | ----- |
 | Part 1: Semigroup Intro | [Article][article-1] | - |
 | Part 2: Composing Semigroups | [Article][article-2] | - |
+| Part 3: Associativity | [Article][article-3] | - |
 
 [article-1]: https://chshersh.com/blog/2024-07-30-pragmatic-category-theory-part-01.html
 [article-2]: https://chshersh.com/blog/2024-08-19-pragmatic-category-theory-part-02.html
+[article-3]: https://chshersh.com/blog/2024-12-20-pragmatic-category-theory-part-03.html
 
 ## Development
 
